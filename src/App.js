@@ -6,7 +6,7 @@ import { loremIpsum } from 'lorem-ipsum'
 const Header = () => {
 	return (
 		<header className='bg-white text-black text-center py-4'>
-			<h1 className='text-8xl font-bold'>cute ui interactions</h1>
+			<h1 className='text-8xl font-bold'>cute ui playground</h1>
 		</header>
 	)
 }
