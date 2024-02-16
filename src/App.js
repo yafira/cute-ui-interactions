@@ -12,12 +12,12 @@ const Header = () => {
 
 function App() {
 	const colors = [
-		'blue-200',
-		'green-200',
-		'indigo-200',
-		'lime-100',
-		'fuchsia-100',
-		'purple-200',
+		'bg-blue-200',
+		'bg-green-200',
+		'bg-indigo-200',
+		'bg-lime-100',
+		'bg-fuchsia-100',
+		'bg-purple-200',
 	]
 
 	const animations = [
@@ -28,12 +28,12 @@ function App() {
 			animate: { scale: 1, rotate: 0 },
 			transition: {
 				ease: 'linear',
-				duration: 2,
+				duration: 1,
 				x: { duration: 1 },
 			},
 		},
 		{
-			whileHover: { scale: 1.2 },
+			whileHover: { scale: 0.2 },
 			whileTap: { scale: 0.8 },
 			initial: { scale: 1 },
 			animate: { scale: 1 },
@@ -48,7 +48,7 @@ function App() {
 			whileHover: { scale: 1.05, rotate: 0 },
 			whileTap: { scale: 0.7 },
 			initial: { scale: 1, rotate: 0 },
-			animate: { scale: 1, rotate: 0 },
+			animate: { scale: 1, rotate: 360 }, // Rotate 360 degrees
 			transition: { type: 'tween' },
 		},
 		{
@@ -58,11 +58,12 @@ function App() {
 			animate: { scale: 1 },
 			transition: { type: 'spring', stiffness: 100 },
 		},
+
 		{
-			whileHover: { scale: 1.1, rotate: 5 },
-			whileTap: { scale: 0.8 },
-			initial: { scale: 1, rotate: 0 },
-			animate: { scale: 1, rotate: 0 },
+			whileTap: { rotateY: 360 },
+			initial: { rotateY: 0 },
+			animate: { rotateY: 0 },
+			transition: { duration: 2 },
 		},
 	]
 
