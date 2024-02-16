@@ -1,5 +1,6 @@
 import React from 'react'
 import Card from './components/Card'
+import Button from './components/Button'
 import { loremIpsum } from 'lorem-ipsum'
 
 const Header = () => {
@@ -12,15 +13,15 @@ const Header = () => {
 
 function App() {
 	const colors = [
-		'bg-blue-200',
-		'bg-green-200',
-		'bg-indigo-200',
+		'bg-blue-100',
+		'bg-green-100',
+		'bg-indigo-100',
 		'bg-lime-100',
 		'bg-fuchsia-100',
-		'bg-purple-200',
+		'bg-purple-100',
 	]
 
-	const animations = [
+	const cardAnimations = [
 		{
 			whileHover: { scale: 1.1, rotate: 0 },
 			whileTap: { scale: 0.9 },
@@ -67,6 +68,33 @@ function App() {
 		},
 	]
 
+	const btnAnimations = [
+		{
+			whileHover: { scale: 1.2, transition: { duration: 1 } },
+			whileTap: { scale: 0.9 },
+		},
+		{
+			whileTap: { scale: 0.85 },
+			transition: { type: 'spring', damping: 10, mass: 0.75, stiffness: 100 },
+		},
+		{
+			whileTap: { opacity: 0.4 },
+			transition: { duration: 0.3 },
+		},
+		{
+			whileTap: { rotate: 360 },
+			transition: { type: 'spring', duration: 5, bounce: 0.6 },
+		},
+		{
+			whileHover: { scale: 1.3, rotate: 0 },
+			whileTap: { scale: 0.6 },
+		},
+
+		{
+			whileTap: { rotate: 90, scale: 0.75 },
+		},
+	]
+
 	const texts = [
 		loremIpsum({ count: 1, units: 'sentences' }),
 		loremIpsum({ count: 1, units: 'sentences' }),
@@ -94,9 +122,19 @@ function App() {
 						key={index}
 						title={`Card ${index + 1}`}
 						text={texts[index]}
-						animation={animations[index]}
+						animation={cardAnimations[index]}
 						color={color}
 						image={images[index]}
+					/>
+				))}
+			</div>
+			<div className='flex justify-center mt-8'>
+				{colors.map((color, index) => (
+					<Button
+						key={index}
+						text={`Button ${index + 1}`}
+						animation={btnAnimations[index]}
+						color={color}
 					/>
 				))}
 			</div>
