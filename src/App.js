@@ -2,6 +2,14 @@ import React from 'react'
 import Card from './components/Card'
 import { loremIpsum } from 'lorem-ipsum'
 
+const Header = () => {
+	return (
+		<header className='bg-white text-black text-center py-4'>
+			<h1 className='text-8xl font-bold'>cute ui interactions</h1>
+		</header>
+	)
+}
+
 function App() {
 	const colors = [
 		'blue-200',
@@ -78,6 +86,7 @@ function App() {
 
 	return (
 		<>
+			<Header />
 			<div className='flex justify-center flex-wrap'>
 				{colors.map((color, index) => (
 					<Card
