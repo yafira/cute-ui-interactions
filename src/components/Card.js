@@ -1,15 +1,21 @@
 import React from 'react'
 import { motion } from 'framer-motion'
 
-const Card = () => {
+const Card = ({ title, text, animation, color, image }) => {
 	return (
 		<motion.div
-			className='bg-gray-200 shadow-lg rounded-lg p-6 w-64'
-			whileHover={{ scale: 1.05 }}
-			whileTap={{ scale: 0.95 }}
+			className={`bg-${color} shadow-lg rounded-lg p-6 w-64 m-4 flex flex-col items-center`}
+			whileHover={animation.whileHover}
+			whileTap={animation.whileTap}
+			initial={animation.initial}
+			animate={animation.animate}
+			transition={animation.transition}
 		>
-			<h1 className='text-xl font-bold mb-4'>Card</h1>
-			<p className='text-gray-600'>hello world!</p>
+			<img src={image} alt={title} className='w-24 h-24 object-cover mb-4' />
+			<div className='text-center p-4'>
+				<h1 className='text-xl font-bold mb-4'>{title}</h1>
+				<p className='text-gray-600'>{text}</p>
+			</div>
 		</motion.div>
 	)
 }
