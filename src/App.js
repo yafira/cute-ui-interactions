@@ -87,7 +87,7 @@ function App() {
 	return (
 		<>
 			<Header />
-			<div className='flex justify-center flex-wrap'>
+			<div className='flex justify-center flex-wrap max-w-screen-lg mx-auto'>
 				{colors.map((color, index) => (
 					<Card
 						key={index}
