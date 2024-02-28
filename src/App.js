@@ -47,10 +47,10 @@ function App() {
 			animate: { scale: 1, rotate: 0 },
 		},
 		{
-			whileHover: { scale: 1.05, rotate: 0 },
-			whileTap: { scale: 0.7 },
+			whileHover: { scale: 1.05 },
+			whileTap: { scale: 0.7, rotate: 360 },
 			initial: { scale: 1, rotate: 0 },
-			animate: { scale: 1, rotate: 360 }, // Rotate 360 degrees
+			animate: { rotate: 0 },
 			transition: { type: 'tween' },
 		},
 		{
