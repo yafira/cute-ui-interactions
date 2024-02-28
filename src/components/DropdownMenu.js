@@ -52,12 +52,7 @@ const DropdownMenu = () => {
 							transition={{ duration: 0.2 }}
 							className='origin-top-right absolute right-0 mt-2 w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none'
 						>
-							<div
-								className='py-1'
-								role='menu'
-								aria-orientation='vertical'
-								aria-labelledby='options-menu'
-							>
+							<div className='py-1' role='menu' aria-orientation='vertical'>
 								<a
 									href='option 1.1'
 									className='block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900'
@@ -109,12 +104,7 @@ const DropdownMenu = () => {
 							transition={{ duration: 0.3 }}
 							className='origin-top-right absolute right-0 mt-2 w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none'
 						>
-							<div
-								className='py-1'
-								role='menu'
-								aria-orientation='vertical'
-								aria-labelledby='options-menu'
-							>
+							<div className='py-1' role='menu' aria-orientation='vertical'>
 								<a
 									href='option 2.1'
 									className='block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900'
@@ -166,12 +156,7 @@ const DropdownMenu = () => {
 							transition={{ duration: 0.4 }}
 							className='origin-top-right absolute right-0 mt-2 w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none'
 						>
-							<div
-								className='py-1'
-								role='menu'
-								aria-orientation='vertical'
-								aria-labelledby='options-menu'
-							>
+							<div className='py-1' role='menu' aria-orientation='vertical'>
 								<a
 									href='option 3.1'
 									className='block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900'
