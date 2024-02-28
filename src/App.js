@@ -8,6 +8,9 @@ const Header = () => {
 	return (
 		<header className='bg-white text-black text-center py-4'>
 			<h1 className='text-8xl font-bold'>cute ui playground</h1>
+			<h2 className='text-4xl font-regular'>
+				micro-interactions built using react and framer motion
+			</h2>
 		</header>
 	)
 }
