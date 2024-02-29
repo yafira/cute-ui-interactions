@@ -27,7 +27,7 @@ const Form1 = () => {
 				placeholder='Enter your name'
 				value={name}
 				onChange={handleChange}
-				className='border border-gray-300 rounded p-2 w-full'
+				className='border border-indigo-200 rounded p-2 w-full'
 			/>
 			<button
 				type='submit'
