@@ -4,6 +4,7 @@ import Button from './components/Button'
 import { loremIpsum } from 'lorem-ipsum'
 import DropdownMenu from './components/DropdownMenu'
 import Modal from './components/Modal'
+import SearchBar from './components/SearchBar'
 
 const Header = () => {
 	return (
@@ -145,6 +146,7 @@ function App() {
 			</div>
 			<DropdownMenu />
 			<Modal />
+			<SearchBar />
 		</>
 	)
 }
