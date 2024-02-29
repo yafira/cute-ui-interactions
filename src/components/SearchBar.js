@@ -1,5 +1,7 @@
 import React, { useState } from 'react'
 import { motion } from 'framer-motion'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faSearch } from '@fortawesome/free-solid-svg-icons'
 
 const SearchBar = () => {
 	const [isFocused, setIsFocused] = useState(false)
@@ -30,7 +32,9 @@ const SearchBar = () => {
 					initial={{ left: '0.75rem' }}
 					animate={{ left: isFocused ? '0.25rem' : '0.75rem' }}
 					transition={{ duration: 0.2 }}
-				></motion.div>
+				>
+					<FontAwesomeIcon icon={faSearch} className='text-gray-400' />
+				</motion.div>
 			</div>
 		</div>
 	)
