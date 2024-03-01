@@ -2,23 +2,21 @@ import React, { useState } from 'react'
 import { motion } from 'framer-motion'
 
 const Slider = ({ value, onChange, color, animation, interaction }) => (
-	<div className='slider-container'>
-		<input
+	<div>
+		<motion.input
 			type='range'
 			min='0'
 			max='100'
 			value={value}
 			onChange={(e) => onChange(parseInt(e.target.value))}
-			className={`range pr-6 accent-${color}-200 `}
+			className={`range pr-6 accent-${color}-200`}
+			style={{
+				width: `${value}%`,
+				height: '10px',
+				transition: `width ${animation.transition.duration}s ease-in-out`,
+			}}
+			{...interaction}
 		/>
-		<motion.div
-			className='slider-bar'
-			style={{ width: `${value}%` }}
-			initial={{ width: '0%' }}
-			animate={{ width: `${value}%` }}
-			transition={animation.transition}
-			{...interaction} // Spread the interaction object here
-		></motion.div>
 	</div>
 )
 
@@ -29,13 +27,13 @@ const AnimatedSliders = () => {
 
 	const animations = [
 		{ transition: { duration: 1 } },
-		{ transition: { duration: 0.5 } },
+		{ transition: { duration: 0.8 } },
 		{ transition: { duration: 2 } },
 	]
 
 	const interactions = [
 		{ whileHover: { scale: 1.2 } },
-		{ whileHover: { rotate: 90 } },
+		{ whileHover: { scale: 1.0 } },
 		{ whileHover: { scale: 1.5 } },
 	]
 
@@ -51,14 +49,14 @@ const AnimatedSliders = () => {
 			<Slider
 				value={value2}
 				onChange={setValue2}
-				color='pink'
+				color='violet'
 				animation={animations[1]}
 				interaction={interactions[1]}
 			/>
 			<Slider
 				value={value3}
 				onChange={setValue3}
-				color='violet'
+				color='pink'
 				animation={animations[2]}
 				interaction={interactions[2]}
 			/>
