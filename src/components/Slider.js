@@ -9,9 +9,9 @@ const Slider = ({ value, onChange, color, animation, interaction }) => (
 			max='100'
 			value={value}
 			onChange={(e) => onChange(parseInt(e.target.value))}
-			className={`range pr-10 accent-${color}-200`}
+			className={`range accent-${color}-200`}
 			style={{
-				width: `${value}%`,
+				width: '100%',
 				height: '10px',
 				transition: `width ${animation.transition.duration}s ease-in-out`,
 			}}
@@ -22,8 +22,8 @@ const Slider = ({ value, onChange, color, animation, interaction }) => (
 
 const AnimatedSliders = () => {
 	const [value1, setValue1] = useState(50)
-	const [value2, setValue2] = useState(30)
-	const [value3, setValue3] = useState(70)
+	const [value2, setValue2] = useState(70)
+	const [value3, setValue3] = useState(90)
 
 	const animations = [
 		{ transition: { duration: 1 } },
@@ -33,7 +33,7 @@ const AnimatedSliders = () => {
 
 	const interactions = [
 		{ whileHover: { scale: 1.2 } },
-		{ whileHover: { scale: 1.0 } },
+		{ whileTap: { scale: 0.8, rotate: 90 } },
 		{ whileHover: { scale: 1.5 } },
 	]
 
@@ -44,7 +44,7 @@ const AnimatedSliders = () => {
 				onChange={setValue1}
 				color='green'
 				animation={animations[0]}
-				interaction={interactions[0]}
+				interaction={{ ...interactions[0], whileDrag: { opacity: 0.5 } }}
 			/>
 			<Slider
 				value={value2}
