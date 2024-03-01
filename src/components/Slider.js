@@ -9,7 +9,7 @@ const Slider = ({ value, onChange, color, animation, interaction }) => (
 			max='100'
 			value={value}
 			onChange={(e) => onChange(parseInt(e.target.value))}
-			className={`range pr-6 accent-${color}-200`}
+			className={`range pr-10 accent-${color}-200`}
 			style={{
 				width: `${value}%`,
 				height: '10px',
@@ -38,7 +38,7 @@ const AnimatedSliders = () => {
 	]
 
 	return (
-		<div className='flex justify-center space-x-4'>
+		<div className='flex justify-center space-x-16'>
 			<Slider
 				value={value1}
 				onChange={setValue1}
