@@ -9,7 +9,7 @@ const Slider = ({ value, onChange, color, animation, interaction }) => (
 			max='100'
 			value={value}
 			onChange={(e) => onChange(parseInt(e.target.value))}
-			className={`range accent-${color}-200`}
+			className={`range ${`accent-${color}-200`} hover:${`accent-${color}-300`}`}
 			style={{
 				width: '100%',
 				height: '10px',
