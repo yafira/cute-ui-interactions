@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { motion } from 'framer-motion'
 
-const Slider = ({ value, onChange, animation, interaction }) => (
+const Slider = ({ value, onChange, color, animation, interaction }) => (
 	<div className='slider-container'>
 		<input
 			type='range'
@@ -9,7 +9,7 @@ const Slider = ({ value, onChange, animation, interaction }) => (
 			max='100'
 			value={value}
 			onChange={(e) => onChange(parseInt(e.target.value))}
-			className='slider'
+			className={`range pr-6 accent-${color}-200 `}
 		/>
 		<motion.div
 			className='slider-bar'
@@ -17,7 +17,7 @@ const Slider = ({ value, onChange, animation, interaction }) => (
 			initial={{ width: '0%' }}
 			animate={{ width: `${value}%` }}
 			transition={animation.transition}
-			{...interaction}
+			{...interaction} // Spread the interaction object here
 		></motion.div>
 	</div>
 )
@@ -44,18 +44,21 @@ const AnimatedSliders = () => {
 			<Slider
 				value={value1}
 				onChange={setValue1}
+				color='green'
 				animation={animations[0]}
 				interaction={interactions[0]}
 			/>
 			<Slider
 				value={value2}
 				onChange={setValue2}
+				color='pink'
 				animation={animations[1]}
 				interaction={interactions[1]}
 			/>
 			<Slider
 				value={value3}
 				onChange={setValue3}
+				color='violet'
 				animation={animations[2]}
 				interaction={interactions[2]}
 			/>
