@@ -6,6 +6,7 @@ import DropdownMenu from './components/DropdownMenu'
 import Modal from './components/Modal'
 import SearchBar from './components/SearchBar'
 import Forms from './components/Forms'
+import Slider from './components/Slider'
 
 const Header = () => {
 	return (
@@ -149,6 +150,7 @@ function App() {
 			<Modal />
 			<SearchBar />
 			<Forms />
+			<Slider />
 		</>
 	)
 }
