@@ -24,7 +24,7 @@ const Form1 = () => {
 		>
 			<input
 				type='text'
-				placeholder='Enter your name'
+				placeholder='Enter your message'
 				value={name}
 				onChange={handleChange}
 				className='border border-indigo-200 rounded p-2 w-full'
@@ -62,7 +62,7 @@ const Form2 = () => {
 			className='bg-white shadow-md rounded p-4 mb-4 w-full max-w-md'
 		>
 			<input
-				placeholder='Enter your message'
+				placeholder='Enter your name'
 				value={message}
 				onChange={handleChange}
 				className='border border-indigo-200 rounded p-2 w-full'
