@@ -136,7 +136,7 @@ function App() {
 					/>
 				))}
 			</div>
-			<div className='flex justify-center mt-8'>
+			<div className='flex flex-wrap justify-center mt-8'>
 				{colors.map((color, index) => (
 					<Button
 						key={index}
