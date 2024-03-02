@@ -80,7 +80,7 @@ const Form2 = () => {
 
 const Forms = () => {
 	return (
-		<div className='flex justify-center space-x-4'>
+		<div className='flex flex-col items-center space-y-4'>
 			<Form1 />
 			<Form2 />
 		</div>
