@@ -9,7 +9,7 @@ const Slider = ({ value, onChange, color, animation, interaction }) => (
 			max='100'
 			value={value}
 			onChange={(e) => onChange(parseInt(e.target.value))}
-			className={`accent-${color}-200`}
+			className={`range ${color}`}
 			style={{
 				width: '100%',
 				height: '10px',
@@ -19,6 +19,8 @@ const Slider = ({ value, onChange, color, animation, interaction }) => (
 		/>
 	</div>
 )
+
+const colors = ['accent-pink-200', 'accent-green-200', 'accent-indigo-200']
 
 const AnimatedSliders = () => {
 	const [value1, setValue1] = useState(50)
@@ -39,27 +41,18 @@ const AnimatedSliders = () => {
 
 	return (
 		<div className='flex justify-center space-x-16'>
-			<Slider
-				value={value1}
-				onChange={setValue1}
-				color='green'
-				animation={animations[0]}
-				interaction={{ ...interactions[0], whileDrag: { opacity: 0.5 } }}
-			/>
-			<Slider
-				value={value2}
-				onChange={setValue2}
-				color='violet'
-				animation={animations[1]}
-				interaction={interactions[1]}
-			/>
-			<Slider
-				value={value3}
-				onChange={setValue3}
-				color='pink'
-				animation={animations[2]}
-				interaction={interactions[2]}
-			/>
+			{colors.map((color, index) => (
+				<Slider
+					key={index}
+					value={index === 0 ? value1 : index === 1 ? value2 : value3}
+					onChange={
+						index === 0 ? setValue1 : index === 1 ? setValue2 : setValue3
+					}
+					color={color}
+					animation={animations[index]}
+					interaction={interactions[index]}
+				/>
+			))}
 		</div>
 	)
 }
