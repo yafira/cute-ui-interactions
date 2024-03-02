@@ -59,7 +59,7 @@ const Form2 = () => {
 			animate={{ opacity: submitted ? 0 : 1, scale: submitted ? 0 : 1 }}
 			transition={{ duration: 0.5 }}
 			onSubmit={handleSubmit}
-			className='bg-white shadow-md rounded p-4 mb-4 w-full max-w-md'
+			className='bg-white shadow-md rounded p-8 mb-8 w-full max-w-md'
 		>
 			<input
 				placeholder='Enter your name'
