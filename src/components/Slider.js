@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { motion } from 'framer-motion'
 
 const Slider = ({ value, onChange, color, animation, interaction }) => (
-	<div>
+	<div className='mb-4'>
 		<motion.input
 			type='range'
 			min='0'
@@ -40,7 +40,7 @@ const AnimatedSliders = () => {
 	]
 
 	return (
-		<div className='flex justify-center space-x-20'>
+		<div className='flex flex-col items-center md:flex-row md:justify-center md:space-x-8'>
 			{colors.map((color, index) => (
 				<Slider
 					key={index}
