@@ -40,7 +40,7 @@ const AnimatedSliders = () => {
 	]
 
 	return (
-		<div className='flex flex-col items-center md:flex-row md:justify-center md:space-x-8'>
+		<div className='flex flex-col items-center md:flex-row md:justify-center md:space-x-8 mt-8'>
 			{colors.map((color, index) => (
 				<Slider
 					key={index}
