@@ -1,4 +1,5 @@
-import React, { useState } from 'react'
+import React from 'react'
+import { useState } from 'react'
 import { motion } from 'framer-motion'
 
 const Form1 = () => {
@@ -80,7 +81,7 @@ const Form2 = () => {
 
 const Forms = () => {
 	return (
-		<div className='flex flex-col md:flex-row justify-center space-x-4'>
+		<div className='flex flex-col items-center justify-center md:flex-row md:justify-center space-y-4 md:space-y-0'>
 			<Form1 />
 			<Form2 />
 		</div>
