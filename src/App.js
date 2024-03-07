@@ -7,6 +7,7 @@ import Modal from './components/Modal'
 import SearchBar from './components/SearchBar'
 import Forms from './components/Forms'
 import Slider from './components/Slider'
+import Accordion from './components/Accordion'
 
 const Header = () => {
 	return (
@@ -151,6 +152,7 @@ function App() {
 			<SearchBar />
 			<Forms />
 			<Slider />
+			<Accordion />
 		</>
 	)
 }
