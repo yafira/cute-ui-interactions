@@ -34,9 +34,9 @@ const AnimatedSliders = () => {
 	]
 
 	const interactions = [
-		{ whileHover: { scale: 0.9 } },
+		{ whileTap: { scale: 0.9 } },
 		{ whileTap: { scale: 0.8, rotate: 90 } },
-		{ whileHover: { scale: 1.5 } },
+		{ whileTap: { scale: 1.5 } },
 	]
 
 	return (
