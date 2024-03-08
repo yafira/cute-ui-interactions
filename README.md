@@ -18,4 +18,4 @@
 
 ---
 
-Check it out [here!](cute-ui-playground.vercel.app)
+Check it out [here!](https://cute-ui-playground.vercel.app/)
