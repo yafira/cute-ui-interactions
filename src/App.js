@@ -8,6 +8,7 @@ import SearchBar from './components/SearchBar'
 import Forms from './components/Forms'
 import Slider from './components/Slider'
 import Accordion from './components/Accordion'
+import NavigationBar from './components/NavigationBar'
 
 const Header = () => {
 	return (
@@ -124,6 +125,7 @@ function App() {
 
 	return (
 		<>
+			<NavigationBar />
 			<Header />
 			<div className='flex justify-center flex-wrap max-w-screen-lg mx-auto'>
 				{colors.map((color, index) => (
