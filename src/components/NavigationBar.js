@@ -10,7 +10,7 @@ const NavigationBar = () => {
 				<div className='flex space-x-4'>
 					<motion.a
 						href='#'
-						className='hover:text-fuchsia-300 hover:underline'
+						className='hover:text-fuchsia-300'
 						whileHover={{ scale: 1.1 }}
 						whileTap={{ scale: 0.9 }}
 					>
@@ -18,7 +18,7 @@ const NavigationBar = () => {
 					</motion.a>
 					<motion.a
 						href='#'
-						className='hover:text-indigo-300 hover:underline'
+						className='hover:text-indigo-300'
 						whileHover={{ scale: 1.1 }}
 						whileTap={{ scale: 0.9 }}
 					>
@@ -26,7 +26,7 @@ const NavigationBar = () => {
 					</motion.a>
 					<motion.a
 						href='#'
-						className='hover:text-green-300 hover:underline'
+						className='hover:text-green-300'
 						whileHover={{ scale: 1.1 }}
 						whileTap={{ scale: 0.9 }}
 					>
@@ -34,7 +34,7 @@ const NavigationBar = () => {
 					</motion.a>
 					<motion.a
 						href='#'
-						className='hover:text-violet-300 hover:underline'
+						className='hover:text-violet-300'
 						whileHover={{ scale: 1.1 }}
 						whileTap={{ scale: 0.9 }}
 					>
